@@ -26,7 +26,7 @@ export default function RequestsList({ requests }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {!requests ? (
+        {requests.length === 0 ? (
           <TableRow>
             <TableCell>No request found</TableCell>
           </TableRow>

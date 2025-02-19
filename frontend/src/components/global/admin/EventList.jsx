@@ -30,51 +30,59 @@ export default function EventsList({ events }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {events.map((event) => (
-          <TableRow key={event._id}>
-            <TableCell className="min-w-20">
-              <LazyLoadImage
-                effect="blur"
-                src={event.image}
-                alt={event.name}
-                className="object-cover rounded-lg h-16 w-20"
-              />
-            </TableCell>
-            <TableCell className="min-w-52">{event.name}</TableCell>
-            <TableCell className="min-w-52">{event.description}</TableCell>
-            <TableCell className="min-w-52">
-              {new Date(event.dateTime).toLocaleString()}
-            </TableCell>
-            <TableCell className="min-w-52">{event.location}</TableCell>
+        {events.length === 0 ? (
+          <TableRow>
             <TableCell>
-              {event.status ? (
-                <Badge variant={"outline"}>Active</Badge>
-              ) : (
-                <Badge variant={"destructive"}>Closed</Badge>
-              )}
-            </TableCell>
-            <TableCell className="space-y-2">
-              <Button
-                variant={event.status ? "destructive" : "outline"}
-                size="sm"
-                onClick={() =>
-                  updateEventStatus(event._id, event.status ? false : true)
-                }
-              >
-                {event.status ? "Deactivate" : "Activate"}
-              </Button>
-              <Button
-                onClick={() => deleteEvent(event._id)}
-                variant="destructive"
-                size={"sm"}
-                disabled={isDeletingEvent}
-              >
-                Delete
-                <Trash2 size={18} />
-              </Button>
+              <p>No events found</p>
             </TableCell>
           </TableRow>
-        ))}
+        ) : (
+          events.map((event) => (
+            <TableRow key={event._id}>
+              <TableCell className="min-w-20">
+                <LazyLoadImage
+                  effect="blur"
+                  src={event.image}
+                  alt={event.name}
+                  className="object-cover rounded-lg h-16 w-20"
+                />
+              </TableCell>
+              <TableCell className="min-w-52">{event.name}</TableCell>
+              <TableCell className="min-w-52">{event.description}</TableCell>
+              <TableCell className="min-w-52">
+                {new Date(event.dateTime).toLocaleString()}
+              </TableCell>
+              <TableCell className="min-w-52">{event.location}</TableCell>
+              <TableCell>
+                {event.status ? (
+                  <Badge variant={"outline"}>Active</Badge>
+                ) : (
+                  <Badge variant={"destructive"}>Closed</Badge>
+                )}
+              </TableCell>
+              <TableCell className="space-y-2">
+                <Button
+                  variant={event.status ? "destructive" : "outline"}
+                  size="sm"
+                  onClick={() =>
+                    updateEventStatus(event._id, event.status ? false : true)
+                  }
+                >
+                  {event.status ? "Deactivate" : "Activate"}
+                </Button>
+                <Button
+                  onClick={() => deleteEvent(event._id)}
+                  variant="destructive"
+                  size={"sm"}
+                  disabled={isDeletingEvent}
+                >
+                  Delete
+                  <Trash2 size={18} />
+                </Button>
+              </TableCell>
+            </TableRow>
+          ))
+        )}
       </TableBody>
     </Table>
   );

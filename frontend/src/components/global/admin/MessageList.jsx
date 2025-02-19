@@ -1,4 +1,3 @@
-
 import {
   Table,
   TableBody,
@@ -21,17 +20,25 @@ export default function MessageList({ messages }) {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {messages.map((message) => (
-          <TableRow key={message._id}>
-            <TableCell className="text-nowrap">{message.firstName +" "+ message.lastName}</TableCell>
-            <TableCell className="min-w-52">{message.email}</TableCell>
-            <TableCell className="min-w-44">{message.subject}</TableCell>
-            <TableCell className="min-w-52">{message.message}</TableCell>
-            <TableCell className="min-w-44">
-              {new Date(message.createdAt).toLocaleString()}
-            </TableCell>
+        {messages.length === 0 ? (
+          <TableRow>
+            <TableCell>No messages</TableCell>
           </TableRow>
-        ))}
+        ) : (
+          messages.map((message) => (
+            <TableRow key={message._id}>
+              <TableCell className="text-nowrap">
+                {message.firstName + " " + message.lastName}
+              </TableCell>
+              <TableCell className="min-w-52">{message.email}</TableCell>
+              <TableCell className="min-w-44">{message.subject}</TableCell>
+              <TableCell className="min-w-52">{message.message}</TableCell>
+              <TableCell className="min-w-44">
+                {new Date(message.createdAt).toLocaleString()}
+              </TableCell>
+            </TableRow>
+          ))
+        )}
       </TableBody>
     </Table>
   );
