@@ -55,62 +55,66 @@ export default function About() {
               <p className="text-center">Loading members..</p>
             ) : (
               <div className="flex flex-wrap items-center justify-center gap-8">
-                {members.map((member) => (
-                  <div
-                    key={member.name}
-                    className="relative w-80 h-96 group overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-3 flex flex-col items-center"
-                  >
-                    {/* Profile Image */}
-                    <div className="w-full h-60 overflow-hidden rounded-t-2xl">
-                      <LazyLoadImage
-                        src={member.image}
-                        alt={member.name}
-                        effect="blur"
-                        width={"100%"}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        loading="lazy"
-                      />
-                    </div>
+                {members.length === 0 ? (
+                  <p className="text-center">No members found</p>
+                ) : (
+                  members.map((member) => (
+                    <div
+                      key={member.name}
+                      className="relative w-80 h-96 group overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-3 flex flex-col items-center"
+                    >
+                      {/* Profile Image */}
+                      <div className="w-full h-60 overflow-hidden rounded-t-2xl">
+                        <LazyLoadImage
+                          src={member.image}
+                          alt={member.name}
+                          effect="blur"
+                          width={"100%"}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          loading="lazy"
+                        />
+                      </div>
 
-                    {/* Content */}
-                    <div className="absolute bottom-0 w-full p-5 bg-white/80 backdrop-blur-md text-center rounded-b-2xl">
-                      <h3 className="text-xl font-bold text-[#1B2A4A]">
-                        {member.name}
-                      </h3>
-                      <p className="text-gray-600">{member.designation}</p>
-                      <p className="text-gray-600">{member.timeframe}</p>
+                      {/* Content */}
+                      <div className="absolute bottom-0 w-full p-5 bg-white/80 backdrop-blur-md text-center rounded-b-2xl">
+                        <h3 className="text-xl font-bold text-[#1B2A4A]">
+                          {member.name}
+                        </h3>
+                        <p className="text-gray-600">{member.designation}</p>
+                        <p className="text-gray-600">{member.timeframe}</p>
 
-                      {/* Social Handles */}
-                      <div className="mt-4 flex justify-center gap-4">
-                        {Object.entries(member.socialHandles || {}).map(
-                          ([platform, link]) => {
-                            const icons = {
-                              linkedin: <Linkedin size={20} />,
-                              github: <Github size={20} />,
-                              twitter: <Twitter size={20} />,
-                              facebook: <Facebook size={20} />,
-                              instagram: <Instagram size={20} />,
-                            };
+                        {/* Social Handles */}
+                        <div className="mt-4 flex justify-center gap-4">
+                          {Object.entries(member.socialHandles || {}).map(
+                            ([platform, link]) => {
+                              const icons = {
+                                linkedin: <Linkedin size={20} />,
+                                github: <Github size={20} />,
+                                twitter: <Twitter size={20} />,
+                                facebook: <Facebook size={20} />,
+                                instagram: <Instagram size={20} />,
+                              };
 
-                            return (
-                              <a
-                                key={platform}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 duration-200 bg-gray-200 text-black p-2.5 rounded-xl"
-                              >
-                                {icons[platform.toLowerCase()] || (
-                                  <Globe size={20} />
-                                )}
-                              </a>
-                            );
-                          }
-                        )}
+                              return (
+                                <a
+                                  key={platform}
+                                  href={link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-2 duration-200 bg-gray-200 text-black p-2.5 rounded-xl"
+                                >
+                                  {icons[platform.toLowerCase()] || (
+                                    <Globe size={20} />
+                                  )}
+                                </a>
+                              );
+                            }
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+                )}
               </div>
             )}
           </div>

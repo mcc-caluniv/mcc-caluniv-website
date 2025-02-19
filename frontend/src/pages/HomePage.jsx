@@ -263,48 +263,52 @@ export default function HomePage() {
         </h2>
         <div className="w-full flex overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_40%,black_70%,transparent)]">
           <motion.div className="flex gap-6 w-max animate-scroll hover:[animation-play-state:paused]">
-            {[...partners].map((partner, index) => (
-              <div
-                key={partner.name}
-                className="relative w-80 h-[23rem] group overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-3 flex flex-col items-center cursor-pointer"
-              >
-                {/* Profile Image */}
-                <div className="w-full h-60 overflow-hidden rounded-t-2xl py-8">
-                  <LazyLoadImage
-                    effect="blur"
-                    src={partner.image}
-                    alt={partner.name}
-                    width={"100%"}
-                    height={"100%"}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
+            {partners.length === 0 ? (
+              <div className="text-center text-muted">No Partners</div>
+            ) : (
+              [...partners].map((partner, index) => (
+                <div
+                  key={partner.name}
+                  className="relative w-80 h-[23rem] group overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-3 flex flex-col items-center cursor-pointer"
+                >
+                  {/* Profile Image */}
+                  <div className="w-full h-60 overflow-hidden rounded-t-2xl py-8">
+                    <LazyLoadImage
+                      effect="blur"
+                      src={partner.image}
+                      alt={partner.name}
+                      width={"100%"}
+                      height={"100%"}
+                      className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
 
-                {/* Content */}
-                <div className="absolute bottom-0 w-full p-5 bg-white/80 backdrop-blur-md text-center rounded-b-2xl">
-                  <>
-                    <h3 className="text-xl font-bold text-[#1B2A4A]">
-                      {partner.name}
-                    </h3>
-                    <p className="text-gray-600">{partner.description}</p>
-                  </>
-                  <div className="flex items-center justify-center gap-x-2 mt-4">
-                    <Link
-                      to={`mailto:${partner.email}`}
-                      className=" duration-200 bg-gray-200 p-2.5 rounded-xl text-black"
-                    >
-                      <Mail size={18} />
-                    </Link>
-                    <Link
-                      to={partner.link}
-                      className="duration-200 bg-gray-200 p-2.5 rounded-xl text-black"
-                    >
-                      <GlobeIcon size={18} />
-                    </Link>
+                  {/* Content */}
+                  <div className="absolute bottom-0 w-full p-5 bg-white/80 backdrop-blur-md text-center rounded-b-2xl">
+                    <>
+                      <h3 className="text-xl font-bold text-[#1B2A4A]">
+                        {partner.name}
+                      </h3>
+                      <p className="text-gray-600">{partner.description}</p>
+                    </>
+                    <div className="flex items-center justify-center gap-x-2 mt-4">
+                      <Link
+                        to={`mailto:${partner.email}`}
+                        className=" duration-200 bg-gray-200 p-2.5 rounded-xl text-black"
+                      >
+                        <Mail size={18} />
+                      </Link>
+                      <Link
+                        to={partner.link}
+                        className="duration-200 bg-gray-200 p-2.5 rounded-xl text-black"
+                      >
+                        <GlobeIcon size={18} />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </motion.div>
         </div>
       </section>
