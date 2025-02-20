@@ -39,11 +39,11 @@ export default function EventsPage() {
       <div className="container my-20 px-4">
         <div className="space-y-12">
           {isEventsLoading ? (
-            <p className="text-center text-lg font-semibold">
+            <p className="text-center text-sm font-semibold">
               Loading events...
             </p>
           ) : events.length === 0 ? (
-            <p className="text-center text-lg font-semibold">
+            <p className="text-center text-sm font-semibold">
               No events found.
             </p>
           ) : (

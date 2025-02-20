@@ -52,11 +52,11 @@ export default function About() {
 
           <div className="w-full py-4 mx-auto">
             {isMembersLoading ? (
-              <p className="text-center">Loading members..</p>
+              <p className="text-center text-sm font-semibold">Loading members..</p>
             ) : (
               <div className="flex flex-wrap items-center justify-center gap-8">
                 {members.length === 0 ? (
-                  <p className="text-center">No members found</p>
+                  <p className="text-center text-sm font-semibold">No members found</p>
                 ) : (
                   members.map((member) => (
                     <div

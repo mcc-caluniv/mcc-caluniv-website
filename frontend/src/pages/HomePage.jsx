@@ -47,7 +47,14 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function HomePage() {
   const { latestEvent, fetchLatestEvent, isLoadingEvent } = useClientStore();
-  const { awards, partners, getPartners, getAwards } = useAdminStore();
+  const {
+    awards,
+    partners,
+    getPartners,
+    getAwards,
+    isLoadingPartner,
+    isLoadingAward,
+  } = useAdminStore();
 
   useEffect(() => {
     fetchLatestEvent();
@@ -106,7 +113,9 @@ export default function HomePage() {
             {latestEvent !== null && (
               <CarouselItem className="relative">
                 {isLoadingEvent ? (
-                  <p className="text-center text-gray-300">Loading events...</p>
+                  <p className="text-center text-sm font-semibold text-gray-300">
+                    Loading events...
+                  </p>
                 ) : (
                   <div className="container h-full flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-12 md:py-20">
                     <img
@@ -229,10 +238,21 @@ export default function HomePage() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {awards.length === 0 ? (
+              {isLoadingAward ? (
                 <TableRow>
-                  <TableCell colSpan={4} className="text-center text-gray-600">
-                    No Awards
+                  <TableCell colSpan={4}>
+                    <p className="text-center text-sm font-semibold">
+                      Loading events...
+                    </p>
+                  </TableCell>
+                </TableRow>
+              ) : awards.length === 0 ? (
+                <TableRow>
+                  <TableCell
+                    colSpan={4}
+                    className="text-center text-sm font-semibold"
+                  >
+                    No Awards Found
                   </TableCell>
                 </TableRow>
               ) : (
@@ -262,11 +282,17 @@ export default function HomePage() {
           OUR PARTNERS
         </h2>
         <div className="w-full flex overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_40%,black_70%,transparent)]">
-          <motion.div className="flex gap-6 w-max animate-scroll hover:[animation-play-state:paused]">
-            {partners.length === 0 ? (
-              <div className="text-center text-muted">No Partners</div>
-            ) : (
-              [...partners].map((partner, index) => (
+          {isLoadingPartner ? (
+            <p className="text-center mx-auto text-sm font-semibold">
+              Loading events...
+            </p>
+          ) : partners.length === 0 ? (
+            <div className="text-center text-sm font-semibold mx-auto">
+              No Partners Found
+            </div>
+          ) : (
+            <motion.div className="flex gap-6 w-max animate-scroll hover:[animation-play-state:paused]">
+              {[...partners].map((partner, index) => (
                 <div
                   key={partner.name}
                   className="relative w-80 h-[23rem] group overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-3 flex flex-col items-center cursor-pointer"
@@ -307,9 +333,9 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              ))
-            )}
-          </motion.div>
+              ))}
+            </motion.div>
+          )}
         </div>
       </section>
 
