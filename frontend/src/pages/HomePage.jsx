@@ -186,12 +186,12 @@ export default function HomePage() {
             Department of Law - University of Calcutta
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <Link to={"/"}>
+            <Link to={"/"} target="_blank">
               <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                   <ImagesIcon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold ">Image Gallary</h3>
+                <h3 className="mb-2 text-xl font-bold ">Image Gallery</h3>
                 <p className="text-gray-600">
                   Proven track record of success in national and international
                   moot court competitions
