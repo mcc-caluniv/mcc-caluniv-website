@@ -147,7 +147,7 @@ export default function About() {
                 <li>🏆 1st Runners Up & Best Researcher - 14th Padma Vibhushan N.A. Palkhivala Memorial National Moot Court Competition, 2024.</li>
                 <li>🏆 2nd Runners Up - 1st Surana & Surana and NUSRL National Criminal Law Moot Court Competition, 2024.</li>      
                 <li>🏆 1st Runners Up - XavAequitas-1st Xavier's National Moot Court Competition, 2024.</li>
-                <li>🏆 2nd Runners Up - 4th Adamas National Moot Court Competition, 2025 </li>
+                <li>🏆 2nd Runners Up - 4th Adamas National Moot Court Competition, 2024 </li>
               </ul>
             </div>
           </div>
