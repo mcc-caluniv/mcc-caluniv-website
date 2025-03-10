@@ -204,7 +204,7 @@ export default function HomePage() {
               </div>
               <h3 className="mb-2 text-xl font-bold ">MCC Specific Rules</h3>
               <p className="text-gray-600">
-                The Framework of Fairness, The Pillar of Precision...
+                The Framework of Fairness, The Pillar of Principles...
               </p>
             </div>
             </Link>
@@ -235,8 +235,7 @@ export default function HomePage() {
               <TableRow>
                 <TableHead className="text-center">Date</TableHead>
                 <TableHead className="text-center">Award</TableHead>
-                <TableHead className="text-center">Description</TableHead>
-                <TableHead className="text-center">Link</TableHead>
+                <TableHead className="text-center">Description</TableHead>                
               </TableRow>
             </TableHeader>
             <TableBody>

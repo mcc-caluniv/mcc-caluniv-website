@@ -135,8 +135,10 @@ export default function About() {
               With a rich legacy spanning over a century, it has produced distinguished legal minds who have shaped the judiciary, academia, and policymaking. 
               Committed to excellence in legal education, the department blends rigorous academics with practical training, ensuring that its students are well-equipped for the evolving legal landscape.
               </p>
-              <p className="text-gray-600 ">With this vision, the Moot Court Committee was established in 2017. It is a student-run body entrusted with the responsibility of administering and facilitating all mooting-related activities at the Department of Law, University of Calcutta. 
-              The committee has a proud tradition of training students for various national moot court competitions, bridging the gap between theoretical learning and practical lawyering.</p>
+              <p className="text-gray-600 ">
+              With this vision, the Moot Court Committee was established in 2017. It is a student-run body entrusted with the responsibility of administering and facilitating all mooting-related activities at the Department of Law, University of Calcutta. 
+              The committee has a proud tradition of training students for various national moot court competitions, bridging the gap between theoretical learning and practical lawyering.
+              </p>
             </div>
             <div className="p-6 bg-gray-100 rounded-lg shadow-sm">
               <h3 className="mb-4 text-xl font-bold text-[#1B2A4A]">
