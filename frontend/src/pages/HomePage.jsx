@@ -198,6 +198,7 @@ export default function HomePage() {
                 </p>
               </div>
             </Link>
+            <Link to={"/"} target="_blank">            
             <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                 <Award className="h-6 w-6 text-primary" />
@@ -207,6 +208,7 @@ export default function HomePage() {
                 Guidance from experienced faculty and legal professionals
               </p>
             </div>
+            </Link>
             <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                 <Users className="h-6 w-6 text-primary" />
