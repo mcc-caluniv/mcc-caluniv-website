@@ -134,10 +134,9 @@ export default function About() {
               Founded in 1909, the Department of Law, University of Calcutta, is one of the oldest and most prestigious legal institutions in India.
               With a rich legacy spanning over a century, it has produced distinguished legal minds who have shaped the judiciary, academia, and policymaking. 
               Committed to excellence in legal education, the department blends rigorous academics with practical training, ensuring that its students are well-equipped for the evolving legal landscape.
-
-              With this vision, the Moot Court Committee was established in 2017. It is a student-run body entrusted with the responsibility of administering and facilitating all mooting-related activities at the Department of Law, University of Calcutta. 
-              The committee has a proud tradition of training students for various national moot court competitions, bridging the gap between theoretical learning and practical lawyering.
-                              </p>
+              </p>
+              <p className="text-gray-600 ">With this vision, the Moot Court Committee was established in 2017. It is a student-run body entrusted with the responsibility of administering and facilitating all mooting-related activities at the Department of Law, University of Calcutta. 
+              The committee has a proud tradition of training students for various national moot court competitions, bridging the gap between theoretical learning and practical lawyering.</p>
             </div>
             <div className="p-6 bg-gray-100 rounded-lg shadow-sm">
               <h3 className="mb-4 text-xl font-bold text-[#1B2A4A]">
@@ -148,6 +147,7 @@ export default function About() {
                 <li>🏆 1st Runners Up & Best Researcher - 14th Padma Vibhushan N.A. Palkhivala Memorial National Moot Court Competition, 2024.</li>
                 <li>🏆 2nd Runners Up - 1st Surana & Surana and NUSRL National Criminal Law Moot Court Competition, 2024.</li>      
                 <li>🏆 1st Runners Up - XavAequitas-1st Xavier's National Moot Court Competition, 2024.</li>
+                <li>🏆 2nd Runners Up - 4th Adamas National Moot Court Competition, 2025 </li>
               </ul>
             </div>
           </div>
