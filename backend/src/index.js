@@ -9,6 +9,7 @@ import adminRoutes from "./routes/admin.route.js";
 import clientRoutes from "./routes/client.route.js";
 import bodyParser from "body-parser";
 import path from "path";
+import job from "./lib/cron.js";
 
 const __dirname = path.resolve();
 
@@ -22,6 +23,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 //MIDDLEWARES
+job.start();
 app.use(cookieParser());
 app.use(
   cors({
