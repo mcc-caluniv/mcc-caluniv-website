@@ -59,7 +59,7 @@ export default function EventsPage() {
 
                 {/* Right Side Content */}
                 <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-                  <h3 className="text-xl md:text-3xl font-normal text-gray-900">
+                  <h3 className="text-xl md:text-3xl font-bold text-gray-900">
                     {event.name}
                   </h3>
                   <div className="mt-2 flex items-center gap-2">

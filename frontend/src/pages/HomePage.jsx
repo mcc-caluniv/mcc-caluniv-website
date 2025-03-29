@@ -231,10 +231,12 @@ export default function HomePage() {
           <Table className="[mask-image:linear-gradient(to_bottom,transparent,black_0%,black_70%,transparent)]">
             <TableHeader>
               <TableRow>
-                <TableHead className="text-center">Date</TableHead>
-                <TableHead className="text-center">Award</TableHead>
-                <TableHead className="text-center">Description</TableHead>
-                <TableHead className="text-center">Link</TableHead>
+                <TableHead className="text-center ">Date</TableHead>
+                <TableHead className="text-center min-w-40">Award</TableHead>
+                <TableHead className="text-center min-w-60">
+                  Description
+                </TableHead>
+                <TableHead className="text-center min-w-60">Link</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
