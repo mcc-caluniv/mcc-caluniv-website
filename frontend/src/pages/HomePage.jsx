@@ -186,37 +186,39 @@ export default function HomePage() {
             Department of Law - University of Calcutta
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <Link to={"/"}>
+            <Link to={"https://drive.google.com/drive/folders/1z-cD033XyAFUQeKxjGzoHqF8zUQ1Xxfx"} target="_blank">
               <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                   <ImagesIcon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold ">Image Gallary</h3>
+                <h3 className="mb-2 text-xl font-bold ">Image Gallery</h3>
                 <p className="text-gray-600">
-                  Proven track record of success in national and international
-                  moot court competitions
+                  Capturing Moments, Inspiring Stories...
                 </p>
               </div>
             </Link>
+            <Link to={"https://drive.google.com/drive/folders/10wMnbUd6ECjd2FAaugDYMh8bBhWfCZcK"} target="_blank">            
             <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                 <Award className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-bold ">MCC Specific Rules</h3>
               <p className="text-gray-600">
-                Guidance from experienced faculty and legal professionals
+                The Framework of Fairness, The Pillar of Principles...
               </p>
             </div>
-            <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
+            </Link>
+            <Link to={"https://drive.google.com/drive/folders/10xiBPz_qxA-DjpNZbIUXTLBJVwPO7t8c"} target="_blank"> 
+             <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                 <Users className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-bold ">Past Secretaries</h3>
               <p className="text-gray-600">
-                Carrying forward the prestigious legacy of University of
-                Calcutta
+                Honouring Leadership, Shaping Legacies...
               </p>
             </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -231,12 +233,10 @@ export default function HomePage() {
           <Table className="[mask-image:linear-gradient(to_bottom,transparent,black_0%,black_70%,transparent)]">
             <TableHeader>
               <TableRow>
-                <TableHead className="text-center ">Date</TableHead>
-                <TableHead className="text-center min-w-40">Award</TableHead>
-                <TableHead className="text-center min-w-60">
-                  Description
-                </TableHead>
-                <TableHead className="text-center min-w-60">Link</TableHead>
+                <TableHead className="text-center">Date</TableHead>
+                <TableHead className="text-center">Award</TableHead>
+                <TableHead className="text-center">Description</TableHead>
+                <TableHead className="text-center">Link</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
