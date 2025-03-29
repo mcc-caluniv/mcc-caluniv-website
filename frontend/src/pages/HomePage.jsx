@@ -186,7 +186,12 @@ export default function HomePage() {
             Department of Law - University of Calcutta
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <Link to={"https://drive.google.com/drive/folders/1z-cD033XyAFUQeKxjGzoHqF8zUQ1Xxfx"} target="_blank">
+            <Link
+              to={
+                "https://drive.google.com/drive/folders/1z-cD033XyAFUQeKxjGzoHqF8zUQ1Xxfx"
+              }
+              target="_blank"
+            >
               <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
                   <ImagesIcon className="h-6 w-6 text-primary" />
@@ -197,27 +202,37 @@ export default function HomePage() {
                 </p>
               </div>
             </Link>
-            <Link to={"https://drive.google.com/drive/folders/10wMnbUd6ECjd2FAaugDYMh8bBhWfCZcK"} target="_blank">            
-            <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
-                <Award className="h-6 w-6 text-primary" />
+            <Link
+              to={
+                "https://drive.google.com/drive/folders/10wMnbUd6ECjd2FAaugDYMh8bBhWfCZcK"
+              }
+              target="_blank"
+            >
+              <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
+                  <Award className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-xl font-bold ">MCC Specific Rules</h3>
+                <p className="text-gray-600">
+                  The Framework of Fairness, The Pillar of Principles...
+                </p>
               </div>
-              <h3 className="mb-2 text-xl font-bold ">MCC Specific Rules</h3>
-              <p className="text-gray-600">
-                The Framework of Fairness, The Pillar of Principles...
-              </p>
-            </div>
             </Link>
-            <Link to={"https://drive.google.com/drive/folders/10xiBPz_qxA-DjpNZbIUXTLBJVwPO7t8c"} target="_blank"> 
-             <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
-                <Users className="h-6 w-6 text-primary" />
+            <Link
+              to={
+                "https://drive.google.com/drive/folders/10xiBPz_qxA-DjpNZbIUXTLBJVwPO7t8c"
+              }
+              target="_blank"
+            >
+              <div className="rounded-lg bg-white p-6 text-center shadow-sm hover:translate-y-4 duration-300 transition-all">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B2A4A]">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-xl font-bold ">Past Secretaries</h3>
+                <p className="text-gray-600">
+                  Honouring Leadership, Shaping Legacies...
+                </p>
               </div>
-              <h3 className="mb-2 text-xl font-bold ">Past Secretaries</h3>
-              <p className="text-gray-600">
-                Honouring Leadership, Shaping Legacies...
-              </p>
-            </div>
             </Link>
           </div>
         </div>
@@ -234,9 +249,11 @@ export default function HomePage() {
             <TableHeader>
               <TableRow>
                 <TableHead className="text-center">Date</TableHead>
-                <TableHead className="text-center">Award</TableHead>
-                <TableHead className="text-center">Description</TableHead>
-                <TableHead className="text-center">Link</TableHead>
+                <TableHead className="text-center min-w-40">Award</TableHead>
+                <TableHead className="text-center min-w-60">
+                  Description
+                </TableHead>
+                <TableHead className="text-center min-w-60">Link</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

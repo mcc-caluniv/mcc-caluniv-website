@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import Footer from "./components/global/Footer";
 import ResetPassword from "./pages/admin/ResetPasswordPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
@@ -53,6 +54,7 @@ function App() {
           path="/admin/reset-password"
           element={!authUser ? <ResetPassword /> : <Navigate to={"/admin"} />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
